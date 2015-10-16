@@ -1,0 +1,40 @@
+<nav>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#/home">Home</a></li>
+                <li class="active">Cart</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<div class="container not-full">
+    <div class="row table-head">
+        <div class="col-xs-4"><p>Product</p></div>
+        <div class="col-xs-2"><p>Price</p></div>
+        <div class="col-xs-2"><p>Quantity</p></div>
+        <div class="col-xs-2"><p>Total</p></div>
+        <div class="col-xs-2"></div>
+    </div>
+
+    <div class="row table-row" ng-repeat="product in products">
+        <div class="col-xs-4"><span class="product-picture"><img ng-src="{{'http://shop.dev.ittalents.bg/' + product.images[0]}}"></span><p class="product-name">{{product.title}}</p></div>
+        <div class="col-xs-2"><p>{{product.price | currency}}</p></div>
+        <div class="col-xs-2"><p>{{product.amount}}</p></div>
+        <div class="col-xs-2"><p>{{product.price * product.amount | currency}}</p></div>
+        <div class="col-xs-2"><i class="fa fa-times-circle" ng-click="removeProduct(product)"></i></div>
+    </div>
+
+<!--
+    <p>Created at: {{created}}</p>
+    <p>Updated at: {{updated}}</p>
+-->
+
+    <div class="row table-footer">
+        <div class="col-xs-8"><p>Total:</p></div>
+        <div class="col-xs-2"><p>{{totalPrice() | currency}}</p></div>
+        <div class="col-xs-2"><a href="#/checkout"><button ng-click = "checkout()">Checkout</button></a></div>
+    </div>
+
+</div>

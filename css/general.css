@@ -1,0 +1,75 @@
+body {
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+    background-image: url("../images/satinweave/satinweave.png"); }
+
+header .top-header {
+    background-color: #573c27;
+    height: 50px;
+    color: #fff; }
+header .top-header #flag {
+    margin-left: 25px; }
+header .top-header a {
+    text-decoration: none; }
+header .top-header a:not(:first-child) {
+    margin-left: 18px; }
+header .top-header a:visited {
+    color: #fff; }
+header .top-header a:hover {
+    color: #f6eddc; }
+header .bottom-header {
+    height: 140px;
+    background-color: #f6eddc;
+    color: #573c27; }
+header .bottom-header h1 {
+    font-family: Brush Script MT,cursive; }
+header .bottom-header h1 span:first-child {
+    color: #88af6f; }
+header .bottom-header h1 span:last-child {
+    color: #e05b5b; }
+header .bottom-header #clock {
+    margin-top: 25px; }
+header .bottom-header #clock p {
+    display: inline-block;
+    margin-left: 10px; }
+header .bottom-header form {
+    display: inline-block;
+    margin-top: 20px; }
+header .bottom-header form input {
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #e05b5b; }
+header .bottom-header #search-button {
+    display: inline-block;
+    cursor: pointer; }
+header .bottom-header #bag-button {
+    display: inline-block;
+    cursor: pointer; }
+
+footer {
+    margin-top: 60px;
+    height: 90px;
+    background-color: #573c27;
+    color: #cac0ae; }
+footer .footer-nav {
+    width: 450px;
+    margin: 10px auto 0 auto;
+    text-align: center; }
+footer .footer-nav a {
+    text-decoration: none;
+    color: #cac0ae; }
+footer .footer-nav a:not(:first-child) {
+    margin-left: 18px; }
+footer .footer-nav a:visited {
+    color: #cac0ae; }
+footer .footer-nav a:hover {
+    color: #fff; }
+footer .footer-nav p {
+    margin-top: 20px; }
+
+nav {
+    font-weight: bold; }
+nav a, nav a:visited {
+    color: #573c27; }
+nav a:hover {
+    color: #e05b5b;
+    text-decoration: none; }

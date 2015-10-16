@@ -1,0 +1,33 @@
+<nav>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#/home">Home</a></li>
+                <li class="active">Products</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<div class="container products">
+
+    <p>Order by:</p>
+    <select ng-model="orderProp">
+        <option value="title">Name</option>
+        <option value="price">Price</option>
+    </select>
+
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-4 col-lg-3" ng-repeat="product in products | orderBy:orderProp">
+            <div class="product">
+                <div><img ng-src="{{'http://shop.dev.ittalents.bg/' + product.images[0]}}" width="180px" height="auto"></div>
+                <div>
+                    <p class="name">{{product.title}}</p>
+                    <p class="price">{{product.price | currency}}</p>
+                </div>
+                <a href="#/products/{{product.id}}"><div class="add-to-cart-button"><p>Buy</p></div></a>
+            </div>
+        </div>
+    </div>
+</div>

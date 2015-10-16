@@ -1,0 +1,51 @@
+<nav>
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/products">Products</a></li>
+                <li class="active">{{product.title}}</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+<!--TBD: detail view for <span>{{productId}}</span>-->
+
+<div class="container detail">
+    <div class="row">
+
+        <div class="col-sm-6 product-images">
+            <span><img ng-src="{{mainImageUrl}}"></span>
+
+            <ul>
+                <li ng-repeat="img in product.images">
+                    <img ng-src="{{'http://shop.dev.ittalents.bg/' + img}}" ng-mouseover="setImage(img)">
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-6 product-info">
+            <h2>{{product.title}}</h2>
+            <p>{{product.description}}</p>
+            <dl>
+                <dt>Price:</dt>
+                <dd><span>{{product.price | currency}}</span> / piece</dd>
+            </dl>
+
+            <dl>
+                <dt>Quantity:</dt>
+                <dd>
+                    <input ng-model="quantity" id="quantity" value="{{quantity}}" type="number" name="quantity" min="1" max="100">
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>Total Price:</dt>
+                <dd><span class="totalPrice">{{product.price * quantity | currency}}</span></dd>
+            </dl>
+
+            <div class="add-to-cart-button" ng-click="addToCart()"><p>Add to Cart</p></div>
+        </div>
+
+    </div>
+</div>
